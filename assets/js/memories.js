@@ -86,7 +86,7 @@
     box.textContent = "";
 
     if (!group) {
-      title.textContent = T[lang].m_title;
+      title.textContent = T[lang].g_title;
       date.textContent = "";
       box.appendChild(el("p", "empty", T[lang].m_missing));
       return;
