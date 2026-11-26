@@ -10,13 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#10243a;
+  --ink:#10243a;        /* গভীর নীল-কালি */
   --ink-2:#1b3a57;
-  --paper:#faf5ea;
+  --paper:#faf5ea;      /* কাগজের রং */
   --paper-2:#f2e9d6;
-  --gold:#d8962b;
+  --gold:#d8962b;       /* সোনালি */
   --gold-2:#f0b955;
-  --red:#b23a2e;
+  --red:#b23a2e;        /* উদীচী-লাল */
   --text:#22303f;
   --muted:#667487;
   --line:rgba(16,36,58,.12);
@@ -29,6 +29,8 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.7;font-size:17px}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* ===== উপরের চিকন বার ===== */
 .topbar{background:var(--ink);color:#d9e2ec;font-size:14px}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:38px;flex-wrap:wrap}
 .tb-left,.tb-right{display:flex;align-items:center;gap:18px}
@@ -43,6 +45,8 @@ a{color:inherit;text-decoration:none}
 .social a:hover{background:var(--gold);}
 .social a:hover svg{fill:var(--ink);stroke:var(--ink)}
 .social svg{width:14px;height:14px;fill:#e9eef4}
+
+/* ===== নেভিগেশন ===== */
 .nav{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px}
 .logo{font-family:"Playfair Display",var(--serif);font-weight:800;font-size:28px;color:var(--ink);letter-spacing:.3px}
@@ -54,6 +58,8 @@ a{color:inherit;text-decoration:none}
 .menu a.shop:hover{background:var(--red)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:40px;cursor:pointer}
 .burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto}
+
+/* ===== হিরো ===== */
 .hero{position:relative;color:#fff;background:
   radial-gradient(circle at 85% 20%,rgba(216,150,43,.28),transparent 45%),
   radial-gradient(circle at 10% 90%,rgba(178,58,46,.25),transparent 40%),
@@ -72,21 +78,27 @@ a{color:inherit;text-decoration:none}
 .btn.line{border-color:rgba(255,255,255,.45);color:#fff}
 .btn.line:hover{background:#fff;color:var(--ink)}
 .portrait{position:relative;justify-self:center;width:min(360px,80vw);aspect-ratio:4/5}
-.portrait .frame{position:absolute;inset:0;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,#274a6b,#0d1d2f);border:3px solid var(--gold);display:grid;place-items:center;text-align:center;color:#a9bbcd;padding:30px;font-size:15px}
-.portrait .frame svg{width:90px;height:90px;fill:none;stroke:var(--gold-2);stroke-width:1.5;margin-bottom:10px}
+.portrait .frame{position:absolute;inset:0;border-radius:200px 200px 24px 24px;background:#0d1d2f;border:3px solid var(--gold);overflow:hidden}
+.portrait .frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
 .portrait::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:2px solid rgba(240,185,85,.4);border-radius:200px 200px 24px 24px;z-index:-1}
+
+/* ===== পরিসংখ্যান ===== */
 .stats{margin-top:-44px;position:relative;z-index:5}
 .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border-radius:var(--radius);box-shadow:0 18px 40px rgba(16,36,58,.14);overflow:hidden}
 .stat{padding:26px 20px;text-align:center;border-right:1px solid var(--line)}
 .stat:last-child{border:0}
 .stat b{display:block;font-family:var(--serif);font-size:34px;color:var(--red);line-height:1.2}
 .stat span{color:var(--muted);font-size:15px}
+
+/* ===== সেকশন ===== */
 section{padding:84px 0}
 .sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
 .sec-head .tag{color:var(--red);font-weight:700;font-size:14px;letter-spacing:1px}
 .sec-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,40px);color:var(--ink);line-height:1.3;margin:6px 0 12px}
 .sec-head h2::after{content:"";display:block;width:60px;height:4px;background:var(--gold);border-radius:4px;margin:14px auto 0}
 .sec-head p{color:var(--muted)}
+
+/* কে আমি */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
 .card h3{font-family:var(--serif);color:var(--ink);font-size:21px;margin-bottom:14px}
@@ -95,6 +107,8 @@ section{padding:84px 0}
 .timeline li::before{content:"";position:absolute;left:-30px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--red)}
 .timeline b{color:var(--ink);display:block}
 .timeline span{color:var(--muted);font-size:15px}
+
+/* সংস্কৃতি */
 .culture{background:var(--paper-2)}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .cc{background:#fff;border-radius:var(--radius);padding:28px 22px;border-top:5px solid var(--red);box-shadow:0 8px 22px rgba(16,36,58,.06);transition:.25s}
@@ -105,9 +119,13 @@ section{padding:84px 0}
 .cc .ic{width:50px;height:50px;border-radius:14px;background:var(--paper);display:grid;place-items:center;font-size:24px;margin-bottom:14px}
 .cc h3{font-family:var(--serif);color:var(--ink);font-size:19px;margin-bottom:8px}
 .cc p{color:var(--muted);font-size:15.5px}
+
+/* স্মৃতি */
 .memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .ph{aspect-ratio:4/3;border-radius:var(--radius);border:2px dashed rgba(16,36,58,.25);display:grid;place-items:center;text-align:center;color:var(--muted);background:repeating-linear-gradient(45deg,#fff,#fff 12px,#fbf7ee 12px,#fbf7ee 24px);padding:20px}
 .ph svg{width:44px;height:44px;fill:none;stroke:var(--gold);stroke-width:1.6;display:block;margin:0 auto 8px}
+
+/* কাগজের ঘর */
 .shop-sec{background:linear-gradient(160deg,var(--ink),#0b1a2b);color:#fff}
 .shop-sec .sec-head h2{color:#fff}
 .shop-sec .sec-head p{color:#b9c8d8}
@@ -126,6 +144,8 @@ section{padding:84px 0}
 .prod button{margin-top:12px;width:100%;padding:9px;border-radius:10px;border:0;background:var(--ink);color:#fff;font:inherit;font-weight:600;cursor:pointer}
 .prod button:hover{background:var(--red)}
 .note{text-align:center;color:#9fb2c6;font-size:14px;margin-top:22px}
+
+/* যোগাযোগ */
 .contact{display:grid;grid-template-columns:1fr 1.1fr;gap:34px}
 .info-row{display:flex;gap:14px;align-items:center;margin-bottom:20px}
 .info-row .ic{width:46px;height:46px;border-radius:50%;background:var(--ink);display:grid;place-items:center;flex:none}
@@ -135,8 +155,11 @@ section{padding:84px 0}
 form input,form textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;margin-bottom:14px;background:var(--paper)}
 form input:focus,form textarea:focus{outline:2px solid var(--gold);background:#fff}
 #formMsg{margin-top:12px;color:var(--red);font-size:15px;min-height:1.2em}
+
 footer{background:#0a1827;color:#9fb2c6;text-align:center;padding:30px 20px;font-size:15px}
 footer b{color:var(--gold-2)}
+
+/* ===== মোবাইল ===== */
 @media(max-width:960px){
   .hero .wrap,.about,.contact{grid-template-columns:1fr}
   .portrait{order:-1;width:min(260px,70vw)}
@@ -161,6 +184,8 @@ footer b{color:var(--gold-2)}
 </style>
 </head>
 <body>
+
+<!-- ১) উপরের চিকন বার -->
 <div class="topbar">
   <div class="wrap">
     <div class="tb-left">
@@ -176,6 +201,8 @@ footer b{color:var(--gold-2)}
     </div>
   </div>
 </div>
+
+<!-- ২) নেভিগেশন -->
 <header class="nav">
   <div class="wrap">
     <a href="#home" class="logo">MKH<span>.</span>Abu</a>
@@ -190,6 +217,8 @@ footer b{color:var(--gold-2)}
     </ul>
   </div>
 </header>
+
+<!-- হিরো -->
 <main id="home">
 <div class="hero">
   <div class="wrap">
@@ -204,18 +233,18 @@ footer b{color:var(--gold-2)}
       </div>
     </div>
     <div class="portrait">
-      <div class="frame"><div>
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-        <span data-i18n="photo"></span>
-      </div></div>
+      <div class="frame"><img src="images/abu-bhai.jpg" width="900" height="985" alt="মোহাম্মদ খালিদ আবু"></div>
     </div>
   </div>
 </div>
+
 <div class="stats"><div class="wrap">
   <div class="stat"><b data-i18n="s1n"></b><span data-i18n="s1t"></span></div>
   <div class="stat"><b data-i18n="s2n"></b><span data-i18n="s2t"></span></div>
   <div class="stat"><b data-i18n="s3n"></b><span data-i18n="s3t"></span></div>
 </div></div>
+
+<!-- কে আমি -->
 <section id="about"><div class="wrap">
   <div class="sec-head"><div class="tag" data-i18n="a_tag"></div><h2 data-i18n="a_title"></h2><p data-i18n="a_sub"></p></div>
   <div class="about">
@@ -235,6 +264,8 @@ footer b{color:var(--gold-2)}
     </div>
   </div>
 </div></section>
+
+<!-- সাংস্কৃতিক কর্মকাণ্ড -->
 <section id="culture" class="culture"><div class="wrap">
   <div class="sec-head"><div class="tag" data-i18n="c_tag"></div><h2 data-i18n="c_title"></h2><p data-i18n="c_sub"></p></div>
   <div class="grid4">
@@ -244,6 +275,8 @@ footer b{color:var(--gold-2)}
     <div class="cc"><div class="ic">🏛️</div><h3 data-i18n="c4h"></h3><p data-i18n="c4p"></p></div>
   </div>
 </div></section>
+
+<!-- স্মৃতির পৃষ্ঠা -->
 <section id="memory"><div class="wrap">
   <div class="sec-head"><div class="tag" data-i18n="m_tag"></div><h2 data-i18n="m_title"></h2><p data-i18n="m_sub"></p></div>
   <div class="memory-grid">
@@ -252,6 +285,8 @@ footer b{color:var(--gold-2)}
     <div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><span data-i18n="m_ph"></span></div></div>
   </div>
 </div></section>
+
+<!-- কাগজের ঘর -->
 <section id="shop" class="shop-sec"><div class="wrap">
   <div class="sec-head"><div class="tag" data-i18n="sh_tag"></div><h2 data-i18n="sh_title"></h2><p data-i18n="sh_sub"></p></div>
   <div class="cats">
@@ -269,6 +304,8 @@ footer b{color:var(--gold-2)}
   </div>
   <p class="note" data-i18n="sh_note"></p>
 </div></section>
+
+<!-- যোগাযোগ -->
 <section id="contact"><div class="wrap">
   <div class="sec-head"><div class="tag" data-i18n="ct_tag"></div><h2 data-i18n="ct_title"></h2><p data-i18n="ct_sub"></p></div>
   <div class="contact">
@@ -289,10 +326,15 @@ footer b{color:var(--gold-2)}
   </div>
 </div></section>
 </main>
+
 <footer>
   <b>MKH.Abu</b> — <span data-i18n="foot"></span>
 </footer>
+
 <script>
+/* ============ সামাজিক মাধ্যম: শুধু যেটায় ঠিকানা আছে সেটাই দেখাবে ============
+   পরে অ্যাডমিন প্যানেল থেকে এই ঠিকানাগুলো বসানো হবে। ফাঁকা ("") থাকলে আইকন লুকানো থাকবে।
+   (নিচের দুটি ঠিকানা শুধু নমুনা — আসল ঠিকানা পেলে বসাব) */
 var SOCIAL = {
   facebook : "https://www.facebook.com/",
   youtube  : "https://www.youtube.com/",
@@ -311,16 +353,18 @@ var NAMES = {facebook:"Facebook",youtube:"YouTube",x:"X",instagram:"Instagram",l
 (function(){
   var ul = document.getElementById("social");
   Object.keys(SOCIAL).forEach(function(k){
-    if(!SOCIAL[k]) return;
+    if(!SOCIAL[k]) return;               /* ঠিকানা নেই → লুকানো */
     var li = document.createElement("li");
     li.innerHTML = '<a href="'+SOCIAL[k]+'" target="_blank" rel="noopener" aria-label="'+NAMES[k]+'">'+ICONS[k]+'</a>';
     ul.appendChild(li);
   });
   if(!ul.children.length) ul.style.display="none";
 })();
+
+/* ============ বাংলা / English ============ */
 var T = {
 bn:{
- phone:"০১৭১৬ ৪৩৩৯২৯", n_home:"হোম", n_about:"কে আমি", n_culture:"সাংস্কৃতিক কর্মকাণ্ড", n_memory:"স্মৃতির পৃষ্ঠা", n_shop:"কাগজের ঘর", n_contact:"যোগাযোগ",
+ phone:"০১৭১৬ ৪৩৩৯২৯", n_home:"হোম", n_about:"কে আমি", n_culture:"সামাজিক কার্যক্রম", n_memory:"স্মৃতির পৃষ্ঠা", n_shop:"কাগজের ঘর", n_contact:"যোগাযোগ",
  eyebrow:"পিরোজপুর থেকে", name:"মোহাম্মদ খালিদ আবু", role:"সাংবাদিক ও ব্যবসায়ী",
  lead:"পেশাদার সাংবাদিক, একাধারে ব্যবসায়ী। উদীচী, নাট্যচক্র ও নানা সামাজিক কর্মকাণ্ডের মাধ্যমে পিরোজপুরের মানুষের কাছে পরিচিত।",
  b_about:"আমার সম্পর্কে জানুন", b_shop:"কাগজের ঘর দেখুন", photo:"এখানে আবু ভাইয়ের ছবি বসবে",
@@ -343,7 +387,7 @@ bn:{
  foot:"মোহাম্মদ খালিদ আবু, পিরোজপুর। সর্বস্বত্ব সংরক্ষিত।"
 },
 en:{
- phone:"01716 433929", n_home:"Home", n_about:"About Me", n_culture:"Cultural Activities", n_memory:"Memories", n_shop:"Kagoj-er Ghor", n_contact:"Contact",
+ phone:"01716 433929", n_home:"Home", n_about:"About Me", n_culture:"Social Activities", n_memory:"Memories", n_shop:"Kagoj-er Ghor", n_contact:"Contact",
  eyebrow:"From Pirojpur", name:"Mohammad Khalid Abu", role:"Journalist & Businessman",
  lead:"A professional journalist and businessman, known to the people of Pirojpur through Udichi, theatre and many social activities.",
  b_about:"About me", b_shop:"Visit the shop", photo:"Abu Bhai's photo will be placed here",
@@ -378,9 +422,13 @@ function setLang(l){
 document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
 var saved="bn"; try{ saved=localStorage.getItem("mkh-lang")||"bn"; }catch(e){}
 setLang(saved==="en"?"en":"bn");
+
+/* মোবাইল মেনু */
 var menu=document.getElementById("menu");
 document.getElementById("burger").addEventListener("click",function(){ menu.classList.toggle("open"); });
 menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click",function(){ menu.classList.remove("open"); }); });
+
+/* নমুনা ফর্ম */
 document.getElementById("form").addEventListener("submit",function(e){ e.preventDefault(); document.getElementById("formMsg").textContent=T[cur].f_demo; });
 </script>
 </body>
