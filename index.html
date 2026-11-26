@@ -67,9 +67,11 @@ a{color:inherit;text-decoration:none}
   overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;opacity:.07;background-image:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 34px)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:84px}
-.eyebrow{display:inline-block;color:var(--gold-2);font-weight:600;letter-spacing:.5px;border-bottom:2px solid var(--gold);padding-bottom:2px;margin-bottom:18px}
-.hero h1{font-family:var(--serif);font-size:clamp(36px,5.4vw,60px);line-height:1.2;font-weight:800;margin-bottom:12px}
-.hero .role{font-size:21px;color:var(--gold-2);font-weight:600;margin-bottom:18px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold-2);font-weight:600;font-size:16px;letter-spacing:.3px;background:rgba(216,150,43,.14);border:1px solid rgba(240,185,85,.45);border-radius:999px;padding:6px 20px 6px 16px;margin-bottom:22px}
+.eyebrow::before{content:"";flex:none;width:9px;height:9px;background:var(--gold-2);transform:rotate(45deg)}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,4.1vw,48px);line-height:1.35;font-weight:800;margin-bottom:16px;white-space:pre-line}
+.hero .role{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:23px;color:var(--gold-2);font-weight:700;margin-bottom:18px}
+.hero .role::before{content:"";width:40px;height:3px;border-radius:3px;background:var(--gold)}
 .hero p.lead{color:#cfdbe8;max-width:560px;margin-bottom:30px;font-size:18px}
 .btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid transparent;transition:.2s;cursor:pointer;font-family:inherit}
@@ -224,8 +226,8 @@ footer b{color:var(--gold-2)}
   <div class="wrap">
     <div>
       <span class="eyebrow" data-i18n="eyebrow"></span>
-      <h1 data-i18n="name"></h1>
-      <div class="role" data-i18n="role"></div>
+      <h1 data-i18n="h_title"></h1>
+      <div class="role"><span data-i18n="h_name"></span></div>
       <p class="lead" data-i18n="lead"></p>
       <div class="btns">
         <a class="btn gold" href="#about" data-i18n="b_about"></a>
@@ -365,8 +367,8 @@ var NAMES = {facebook:"Facebook",youtube:"YouTube",x:"X",instagram:"Instagram",l
 var T = {
 bn:{
  phone:"০১৭১৬ ৪৩৩৯২৯", n_home:"হোম", n_about:"কে আমি", n_culture:"সামাজিক কার্যক্রম", n_memory:"স্মৃতির পৃষ্ঠা", n_shop:"কাগজের ঘর", n_contact:"যোগাযোগ",
- eyebrow:"পিরোজপুর থেকে", name:"মোহাম্মদ খালিদ আবু", role:"সাংবাদিক ও ব্যবসায়ী",
- lead:"পেশাদার সাংবাদিক, একাধারে ব্যবসায়ী। উদীচী, নাট্যচক্র ও নানা সামাজিক কর্মকাণ্ডের মাধ্যমে পিরোজপুরের মানুষের কাছে পরিচিত।",
+ eyebrow:"আমার পেশা, আমার দায়বদ্ধতা", name:"মোহাম্মদ খালিদ আবু", role:"সাংবাদিক ও ব্যবসায়ী",
+ lead:"সাংবাদিকতাকে আমি শুধু একটি পেশা নয়, বরং সমাজ ও মানুষের প্রতি দায়িত্ব পালনের একটি মাধ্যম হিসেবে দেখি। সত্যনিষ্ঠতা ও সাহসিকতাকে ধারণ করে কাজ করে যেতে চাই।", h_title:"সত্য বলতে চাই,\nমানুষের পাশে থাকতে চাই", h_name:"মোহাম্মদ খালেদ আবু",
  b_about:"আমার সম্পর্কে জানুন", b_shop:"কাগজের ঘর দেখুন", photo:"এখানে আবু ভাইয়ের ছবি বসবে",
  s1n:"১৯৫৭", s1t:"জন্ম — পিরোজপুর", s2n:"১৫ বছর", s2t:"জাপানে ছিলেন", s3n:"৭ বছর", s3t:"নিজেদের গার্মেন্টস দেখাশোনা",
  a_tag:"পরিচিতি", a_title:"কে আমি", a_sub:"জীবন, শিক্ষা ও কর্মজীবনের সংক্ষিপ্ত পরিচয়",
@@ -388,8 +390,8 @@ bn:{
 },
 en:{
  phone:"01716 433929", n_home:"Home", n_about:"About Me", n_culture:"Social Activities", n_memory:"Memories", n_shop:"Kagoj-er Ghor", n_contact:"Contact",
- eyebrow:"From Pirojpur", name:"Mohammad Khalid Abu", role:"Journalist & Businessman",
- lead:"A professional journalist and businessman, known to the people of Pirojpur through Udichi, theatre and many social activities.",
+ eyebrow:"My profession, my responsibility", name:"Mohammad Khalid Abu", role:"Journalist & Businessman",
+ lead:"I see journalism not merely as a profession, but as a way of fulfilling my duty to society and its people. I want to keep working with truthfulness and courage.", h_title:"I want to speak the truth,\nand stand beside people", h_name:"Mohammad Khalid Abu",
  b_about:"About me", b_shop:"Visit the shop", photo:"Abu Bhai's photo will be placed here",
  s1n:"1957", s1t:"Born — Pirojpur", s2n:"15 years", s2t:"Lived in Japan", s3n:"7 years", s3t:"Ran the family garments business",
  a_tag:"INTRODUCTION", a_title:"About Me", a_sub:"A short introduction to life, education and career",
