@@ -147,6 +147,11 @@ form input:focus,form textarea:focus{outline:2px solid var(--gold);background:#f
 footer{background:#0a1827;color:#9fb2c6;text-align:center;padding:30px 20px;font-size:15px}
 footer b{color:var(--gold-2)}
 
+/* মাঝারি পর্দায় সব মেনু এক সারিতে রাখা */
+@media(max-width:1060px) and (min-width:961px){
+  .menu a{padding:8px 9px;font-size:15px}
+}
+
 /* ===== মোবাইল ===== */
 @media(max-width:960px){
   .hero .wrap,.about,.contact{grid-template-columns:1fr}

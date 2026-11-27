@@ -34,7 +34,7 @@ var NAMES = {facebook:"Facebook",youtube:"YouTube",x:"X",instagram:"Instagram",l
 /* ============ বাংলা / English ============ */
 var T = {
 bn:{
- phone:"০১৭১৬ ৪৩৩৯২৯", n_home:"হোম", n_about:"কে আমি", n_culture:"সামাজিক কার্যক্রম", n_memory:"স্মৃতির পৃষ্ঠা", n_shop:"কাগজের ঘর", n_contact:"যোগাযোগ",
+ phone:"০১৭১৬ ৪৩৩৯২৯", n_home:"হোম", n_prof:"আমার পেশা", n_about:"কে আমি", n_culture:"সামাজিক কার্যক্রম", n_memory:"স্মৃতির পৃষ্ঠা", n_shop:"কাগজের ঘর", n_contact:"যোগাযোগ",
  eyebrow:"আমার পেশা, আমার দায়বদ্ধতা", name:"মোহাম্মদ খালিদ আবু", role:"সাংবাদিক ও ব্যবসায়ী",
  lead:"সাংবাদিকতাকে আমি শুধু একটি পেশা নয়, বরং সমাজ ও মানুষের প্রতি দায়িত্ব পালনের একটি মাধ্যম হিসেবে দেখি। সত্যনিষ্ঠতা ও সাহসিকতাকে ধারণ করে কাজ করে যেতে চাই।", h_title:"সত্য বলতে চাই,\nমানুষের পাশে থাকতে চাই",
  b_about:"আমার সম্পর্কে জানুন", b_shop:"কাগজের ঘর দেখুন", photo:"এখানে আবু ভাইয়ের ছবি বসবে",
@@ -50,6 +50,9 @@ bn:{
  m_tag:"অতীত, বর্তমান ও আগামীর পথে", m_title:"সময় বদলায়, স্মৃতি থেকে যায়", m_sub:"জীবনের নানা সময়ের পথচলা, বিশেষ মুহূর্ত, প্রিয় মানুষ এবং উল্লেখযোগ্য অভিজ্ঞতার কিছু আলোকচিত্র।\nসময়ের সঙ্গে যুক্ত হওয়া প্রতিটি ছবিই এখানে হয়ে থাকবে এক একটি গল্প।",
  g_tag:"স্মৃতি", g_title:"স্মৃতির পৃষ্ঠা", g_sub:"পুরনো দিনের ছবি ও মুহূর্ত — অ্যাডমিন প্যানেল থেকে যুক্ত হবে", m_ph:"স্মৃতির ছবি এখানে যুক্ত হবে",
  m_all:"সব ছবি দেখুন", m_back:"← সকল ছবির পেইজে ফিরে যান", m_prev:"আগের ছবি", m_next:"পরের ছবি", m_empty:"এখনো কোনো ছবি যোগ হয়নি।", m_missing:"ছবির গ্রুপটি পাওয়া যায়নি।",
+ pr_tag:"আমার পেশা", pr_title:"সাংবাদিকতা", pr_sub:"পত্রিকায় প্রকাশিত সংবাদ ও আমার নিজের লেখা খবর", pr_all:"সব সংবাদ দেখুন",
+ np_tag:"নিউজ পোর্টাল", np_title:"সর্বশেষ সংবাদ", np_own:"নিজস্ব সংবাদ", np_read:"মূল সংবাদ পড়ুন", np_ph:"সংবাদের ছবি এখানে যুক্ত হবে", np_empty:"এখনো কোনো সংবাদ যোগ হয়নি।",
+ sp_tag:"আমার ব্যবসা", bn_ph:"ব্যানারের ছবি এখানে যুক্ত হবে",
  sh_tag:"অনলাইন শপ", sh_title:"কাগজের ঘর", sh_sub:"কাগজ, কলম, পেন্সিল, রাবারসহ সব ধরনের স্টেশনারী — এখন অনলাইনে",
  k1:"কাগজ", k2:"কলম", k3:"পেন্সিল", k4:"রাবার", k5:"আরও সব",
  sample:"নমুনা", p1:"নমুনা পণ্য — কাগজ", p2:"নমুনা পণ্য — কলম", p3:"নমুনা পণ্য — পেন্সিল", p4:"নমুনা পণ্য — রাবার", price:"দাম যোগ হবে", cart:"কার্টে যোগ করুন",
@@ -59,7 +62,7 @@ bn:{
  foot:"মোহাম্মদ খালিদ আবু, পিরোজপুর। সর্বস্বত্ব সংরক্ষিত।"
 },
 en:{
- phone:"01716 433929", n_home:"Home", n_about:"About Me", n_culture:"Social Activities", n_memory:"Memories", n_shop:"Kagoj-er Ghor", n_contact:"Contact",
+ phone:"01716 433929", n_home:"Home", n_prof:"My Profession", n_about:"About Me", n_culture:"Social Activities", n_memory:"Memories", n_shop:"Kagoj-er Ghor", n_contact:"Contact",
  eyebrow:"My profession, my responsibility", name:"Mohammad Khalid Abu", role:"Journalist & Businessman",
  lead:"I see journalism not merely as a profession, but as a way of fulfilling my duty to society and its people. I want to keep working with truthfulness and courage.", h_title:"I want to speak the truth,\nand stand beside people",
  b_about:"About me", b_shop:"Visit the shop", photo:"Abu Bhai's photo will be placed here",
@@ -75,6 +78,9 @@ en:{
  m_tag:"Past, present and the road ahead", m_title:"Time changes, memories remain", m_sub:"Some photographs of journeys through different times of life, special moments, loved ones and notable experiences.\nEvery picture added over time will remain here as a story of its own.",
  g_tag:"MEMORIES", g_title:"Memories", g_sub:"Photos and moments from earlier days — to be added from the admin panel", m_ph:"Memory photos will be added here",
  m_all:"View all photos", m_back:"← Back to all photos", m_prev:"Previous photos", m_next:"Next photos", m_empty:"No photos have been added yet.", m_missing:"This photo group was not found.",
+ pr_tag:"MY PROFESSION", pr_title:"Journalism", pr_sub:"News published in newspapers and news written by me", pr_all:"View all news",
+ np_tag:"NEWS PORTAL", np_title:"Latest News", np_own:"Own report", np_read:"Read the original", np_ph:"News photo will be added here", np_empty:"No news has been added yet.",
+ sp_tag:"MY BUSINESS", bn_ph:"Banner photo will be added here",
  sh_tag:"ONLINE SHOP", sh_title:"Kagoj-er Ghor", sh_sub:"Paper, pens, pencils, erasers and every kind of stationery — now online",
  k1:"Paper", k2:"Pens", k3:"Pencils", k4:"Erasers", k5:"More",
  sample:"Sample", p1:"Sample product — Paper", p2:"Sample product — Pen", p3:"Sample product — Pencil", p4:"Sample product — Eraser", price:"Price to be added", cart:"Add to cart",
